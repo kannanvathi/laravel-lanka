@@ -22,3 +22,5 @@ Route::get('contact', function(){
 Route::get('about', function(){
     return view('about');
 });
+
+Route::post('form_submit', 'formSubmit@index');
