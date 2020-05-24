@@ -1,9 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.app1')
 
 @section('title', 'contact')
 
 @section('content')
 <div class="container">
+    {{session('status')}}
     <form method="post" action="form_submit">
         @csrf
         <div class="form-group">
