@@ -12,7 +12,6 @@ class accessors extends Controller
     }
     public function mutator(){
         $form_table = new form_table();
-        $form_table->name =
 
     }
 }

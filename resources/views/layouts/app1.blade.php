@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="home1">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact">contact</a>
@@ -62,6 +62,12 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="one-relationship">one to one relationship</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="form_table/kannan@gmail.com">Route model binding</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mail">Mail template</a>
             </li>
         </ul>
     </div>

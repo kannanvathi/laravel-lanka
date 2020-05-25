@@ -61,4 +61,9 @@ class formSubmit extends Controller
         $data->save();
         echo 'data updated';
     }
+
+    function redirectAuth(Request $req){
+        return redirect('api/login', ['email' =>$req->input('email'), 'password' => $req->input('password')]);
+
+    }
 }

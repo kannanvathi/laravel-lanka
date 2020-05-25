@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  \Illuminate\Support\Str;
+use \App\Mail\sampleMail;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('home', function () {
+Route::get('home1', function () {
     return view('home1');
 });
 Route::get('contact', function(){
@@ -46,9 +49,28 @@ Route::get('joinData2', 'joinData@index');
 Route::get('accessors', 'accessors@index');
 Route::get('mutators', 'accessors@mutator');
 Route::get('one-relationship', 'relationship@one');
+Route::post('login_auth', function(){
+   return redirect() ;
+});
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('form_table/{item:email}', 'routeBinding@index');
 
+/*$info = 'is this fluent string';
+$info = Str::replaceFirst('is this', 'this is', $info);
+$info = Str::ucfirst($info);
+$info = Str::camel($info);
+
+$info = Str::of($info)->replaceFirst('is this', 'this is', $info)
+        ->ucfirst($info)
+    ->camel($info);
+
+echo $info;*/
+
+Route::get('mail', function(){
+    return new sampleMail();
+});
+Route::middleware('auth:sanctum')->post('login_auth', 'apiController@index');

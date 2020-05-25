@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     {{session('status')}}
-    <form method="post" action="form_submit">
+    <form method="post" action="login_auth">{{--form_submit--}}
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
